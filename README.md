@@ -6,7 +6,7 @@
 Our project focuses on the biases and political skews of United States based tweets. We use advanced Natural Language Processing techniques and deep learning models to learn how to classify tweets based on political leaning. Ultimately, we will be able to map tweet text to a linear political spectrum, between consertative and liberal.
 
 
-![alt_text](images/image1.png "image_tooltip")
+![alt_text](./flow_diagram.png)
 
 
 
