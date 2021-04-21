@@ -79,7 +79,7 @@ To find the Sample input/output for aggregation navigate to:
 data/
 
 To find the code for QC navigate to:
-src/
+src/QC.py
 
 To find the code for aggregation QC navigate to:
-src/
+src/aggregation.py
