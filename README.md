@@ -72,14 +72,22 @@ data/tweets-clean.csv
 the file used for tweet scraping can also be found at:
 src/tweet_collection.py
 
-To find the Sample input/output for QC navigate to:
-data/qualit_control_toy_dataset.csv
+To find the Sample input for QC navigate to:
+data/QC_Agg_Inputs.csv
 
-To find the Sample input/output for aggregation navigate to:
-data/
+To find the Sample output for QC navigate to:
+data/qc_output.csv
+
+To find the Sample input for aggregation navigate to:
+data/qc_output
+AND
+data/QC_Agg_Inputs.csv
+
+To find the Sample output for aggregation navigate to:
+data/aggregation_output.csv
 
 To find the code for QC navigate to:
-src/QC.py
+src/code.py (QC function)
 
-To find the code for aggregation QC navigate to:
-src/aggregation.py
+To find the code for aggregation navigate to:
+src/code.py (aggregation function)
