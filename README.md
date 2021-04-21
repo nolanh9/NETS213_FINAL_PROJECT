@@ -62,3 +62,24 @@ This gets particularly interesting when applying this method to journalist/influ
 ### Identification and Collection of Politically Salient Tweets for Further Research
 
 With the world, and especially the United States, becoming increasingly politically divided, it becomes imperative that we keep up with the current state of political affairs. Since Twitter in particular has become a popular mode of communication amongst all platforms, it is also important to help others sift through relevant and non-relevant political information. Our political model will allow researchers to identify and select users and tweets in an efficient manner for a particular subsection of the political spectrum that they may be interested in.
+
+
+### PART TWO DELIVERABLE TWO
+
+To find the Raw Data navigate to:
+data/tweets-clean.csv
+
+the file used for tweet scraping can also be found at:
+src/tweet_collection.py
+
+To find the Sample input/output for QC navigate to:
+data/qualit_control_toy_dataset.csv
+
+To find the Sample input/output for aggregation navigate to:
+data/
+
+To find the code for QC navigate to:
+src/QC.py
+
+To find the code for aggregation QC navigate to:
+src/aggregation.py
