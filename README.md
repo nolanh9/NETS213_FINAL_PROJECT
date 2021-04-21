@@ -70,7 +70,7 @@ To find the Raw Data navigate to:
 data/tweets-clean.csv
 
 the file used for tweet scraping can also be found at:
-src/tweet_collection.py
+data/tweet_collection.py
 
 To find the Sample input for QC navigate to:
 data/QC_Agg_Inputs.csv
