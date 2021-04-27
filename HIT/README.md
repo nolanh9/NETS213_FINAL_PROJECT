@@ -11,7 +11,7 @@ Our Mechanical Turk HIT is to evaluate the political sentiments of tweets so tha
 
 ## HIT Instructions
 
-![alt_text](images/image1.png "image_tooltip")
+![alt_text](./HITscreenshot.png)
 
 *   Read each tweet in the box on the left side
 *   From the options on the right side, click on whichever closest fits the tweet
