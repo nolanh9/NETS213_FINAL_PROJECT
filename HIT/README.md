@@ -16,6 +16,7 @@ Our Mechanical Turk HIT is to evaluate the political sentiments of tweets so tha
 *   Read each tweet in the box on the left side
 *   From the options on the right side, click on whichever closest fits the tweet
 *   If you are unsure how to answer the question or if the tweet is not political, then choose the option “N/A”
+*   After you have selected a choice for every tweet, click submit and now you have a completed HIT
 
 
 ## Point of Contact
