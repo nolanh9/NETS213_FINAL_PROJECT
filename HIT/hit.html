@@ -1,0 +1,363 @@
+<!-- You must include this JavaScript file -->
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+<!-- For the full list of available Crowd HTML Elements and their input/output documentation,
+      please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
+
+<!-- You must include crowd-form so that your task submits answers to MTurk -->
+<crowd-form answer-format="flatten-objects">
+
+    <!-- The crowd-classifier element will create a tool for the Worker to select the
+           correct answer to your question -->
+    <crowd-classifier 
+      name="gold-standard-liberal"
+      categories="['Extremely Liberal', 'Moderately Liberal', 'Moderately Conservative', 'Extremely Conservative', 'N/A']"
+      header="What is the political sentiment expressed in this Tweet?"
+    >
+
+      <classification-target>
+        <!-- The text you want classified will be substituted for the "text" variable when you 
+               publish a batch with a CSV input file containing multiple text items  -->
+        ${gold_standard_lib}
+      </classification-target>
+
+     <!-- Use the short-instructions section for quick instructions that the Worker
+            will see while working on the task. Including some basic examples of 
+            good and bad answers here can help get good results. You can include 
+            any HTML here. -->
+      <short-instructions>
+       Choose the primary sentiment that is expressed by the text. If the Tweet doesn't relate to politics or the Tweet doesn't make any sense, choose "N/A"
+       
+      </short-instructions>
+
+      <!-- Use the full-instructions section for more detailed instructions that the 
+            Worker can open while working on the task. Including more detailed 
+            instructions and additional examples of good and bad answers here can
+            help get good results. You can include any HTML here. -->
+      <full-instructions header="Sentiment Analysis Instructions">
+        <p><strong>Extremely Liberal Example:</strong> "Crack cocaine should be legal in every state"</p>
+        <p><strong>Moderately Liberal Example:</strong> "I would support a slight increase in taxes in order to fund social welfare programs"</p>
+        <p><strong>Moderately Conservative Example</strong>: "A less regulated economy is a more efficient economy"</p>
+        <p><strong>Extremely Conservative Example:</strong> "Joe Biden is a communist and should be arrested"</p>
+        <p><strong>N/A:</strong> any Tweet that isn't about politics or doesn't make sense</p>
+        <p>When the political sentiment is mixed, such as both joy and sadness, use your judgment to choose the stronger emotion.</p>
+      </full-instructions>
+
+    </crowd-classifier>
+    <crowd-classifier 
+      name="gold-standard-cons"
+      categories="['Extremely Liberal', 'Moderately Liberal', 'Moderately Conservative', 'Extremely Conservative', 'N/A']"
+      header="What is the political sentiment expressed in this Tweet?"
+    >
+
+      <classification-target>
+        <!-- The text you want classified will be substituted for the "text" variable when you 
+               publish a batch with a CSV input file containing multiple text items  -->
+        ${gold_standard_conservative}
+      </classification-target>
+
+     <!-- Use the short-instructions section for quick instructions that the Worker
+            will see while working on the task. Including some basic examples of 
+            good and bad answers here can help get good results. You can include 
+            any HTML here. -->
+      <short-instructions>
+       Choose the primary sentiment that is expressed by the text. If the Tweet doesn't relate to politics or the Tweet doesn't make any sense, choose "N/A"
+       
+      </short-instructions>
+
+      <!-- Use the full-instructions section for more detailed instructions that the 
+            Worker can open while working on the task. Including more detailed 
+            instructions and additional examples of good and bad answers here can
+            help get good results. You can include any HTML here. -->
+      <full-instructions header="Sentiment Analysis Instructions">
+        <p><strong>Extremely Liberal Example:</strong> "Crack cocaine should be legal in every state"</p>
+        <p><strong>Moderately Liberal Example:</strong> "I would support a slight increase in taxes in order to fund social welfare programs"</p>
+        <p><strong>Moderately Conservative Example</strong>: "A less regulated economy is a more efficient economy"</p>
+        <p><strong>Extremely Conservative Example:</strong> "Joe Biden is a communist and should be arrested"</p>
+        <p><strong>N/A:</strong> any Tweet that isn't about politics or doesn't make sense</p>
+        <p>When the political sentiment is mixed, such as both joy and sadness, use your judgment to choose the stronger emotion.</p>
+      </full-instructions>
+
+    </crowd-classifier>
+    
+    <crowd-classifier 
+      name="gold-standard-na"
+      categories="['Extremely Liberal', 'Moderately Liberal', 'Moderately Conservative', 'Extremely Conservative', 'N/A']"
+      header="What is the political sentiment expressed in this Tweet?"
+    >
+
+      <classification-target>
+        <!-- The text you want classified will be substituted for the "text" variable when you 
+               publish a batch with a CSV input file containing multiple text items  -->
+        ${gold_standard_na}
+      </classification-target>
+
+     <!-- Use the short-instructions section for quick instructions that the Worker
+            will see while working on the task. Including some basic examples of 
+            good and bad answers here can help get good results. You can include 
+            any HTML here. -->
+      <short-instructions>
+       Choose the primary sentiment that is expressed by the text. If the Tweet doesn't relate to politics or the Tweet doesn't make any sense, choose "N/A"
+       
+      </short-instructions>
+
+      <!-- Use the full-instructions section for more detailed instructions that the 
+            Worker can open while working on the task. Including more detailed 
+            instructions and additional examples of good and bad answers here can
+            help get good results. You can include any HTML here. -->
+      <full-instructions header="Sentiment Analysis Instructions">
+        <p><strong>Extremely Liberal Example:</strong> "Crack cocaine should be legal in every state"</p>
+        <p><strong>Moderately Liberal Example:</strong> "I would support a slight increase in taxes in order to fund social welfare programs"</p>
+        <p><strong>Moderately Conservative Example</strong>: "A less regulated economy is a more efficient economy"</p>
+        <p><strong>Extremely Conservative Example:</strong> "Joe Biden is a communist and should be arrested"</p>
+        <p><strong>N/A:</strong> any Tweet that isn't about politics or doesn't make sense</p>
+        <p>When the political sentiment is mixed, such as both joy and sadness, use your judgment to choose the stronger emotion.</p>
+      </full-instructions>
+
+    </crowd-classifier>
+    <crowd-classifier 
+      name="tweet-1"
+      categories="['Extremely Liberal', 'Moderately Liberal', 'Moderately Conservative', 'Extremely Conservative', 'N/A']"
+      header="What is the political sentiment expressed in this Tweet?"
+    >
+
+      <classification-target>
+        <!-- The text you want classified will be substituted for the "text" variable when you 
+               publish a batch with a CSV input file containing multiple text items  -->
+        ${tweet1}
+      </classification-target>
+
+     <!-- Use the short-instructions section for quick instructions that the Worker
+            will see while working on the task. Including some basic examples of 
+            good and bad answers here can help get good results. You can include 
+            any HTML here. -->
+      <short-instructions>
+       Choose the primary sentiment that is expressed by the text. If the Tweet doesn't relate to politics or the Tweet doesn't make any sense, choose "N/A"
+       
+      </short-instructions>
+
+      <!-- Use the full-instructions section for more detailed instructions that the 
+            Worker can open while working on the task. Including more detailed 
+            instructions and additional examples of good and bad answers here can
+            help get good results. You can include any HTML here. -->
+      <full-instructions header="Sentiment Analysis Instructions">
+        <p><strong>Extremely Liberal Example:</strong> "Crack cocaine should be legal in every state"</p>
+        <p><strong>Moderately Liberal Example:</strong> "I would support a slight increase in taxes in order to fund social welfare programs"</p>
+        <p><strong>Moderately Conservative Example</strong>: "A less regulated economy is a more efficient economy"</p>
+        <p><strong>Extremely Conservative Example:</strong> "Joe Biden is a communist and should be arrested"</p>
+        <p><strong>N/A:</strong> any Tweet that isn't about politics or doesn't make sense</p>
+        <p>When the political sentiment is mixed, such as both joy and sadness, use your judgment to choose the stronger emotion.</p>
+      </full-instructions>
+
+    </crowd-classifier>
+    <crowd-classifier 
+      name="tweet-2"
+      categories="['Extremely Liberal', 'Moderately Liberal', 'Moderately Conservative', 'Extremely Conservative', 'N/A']"
+      header="What is the political sentiment expressed in this Tweet?"
+    >
+
+      <classification-target>
+        <!-- The text you want classified will be substituted for the "text" variable when you 
+               publish a batch with a CSV input file containing multiple text items  -->
+        ${tweet2}
+      </classification-target>
+
+     <!-- Use the short-instructions section for quick instructions that the Worker
+            will see while working on the task. Including some basic examples of 
+            good and bad answers here can help get good results. You can include 
+            any HTML here. -->
+      <short-instructions>
+       Choose the primary sentiment that is expressed by the text. If the Tweet doesn't relate to politics or the Tweet doesn't make any sense, choose "N/A"
+       
+      </short-instructions>
+
+      <!-- Use the full-instructions section for more detailed instructions that the 
+            Worker can open while working on the task. Including more detailed 
+            instructions and additional examples of good and bad answers here can
+            help get good results. You can include any HTML here. -->
+      <full-instructions header="Sentiment Analysis Instructions">
+        <p><strong>Extremely Liberal Example:</strong> "Crack cocaine should be legal in every state"</p>
+        <p><strong>Moderately Liberal Example:</strong> "I would support a slight increase in taxes in order to fund social welfare programs"</p>
+        <p><strong>Moderately Conservative Example</strong>: "A less regulated economy is a more efficient economy"</p>
+        <p><strong>Extremely Conservative Example:</strong> "Joe Biden is a communist and should be arrested"</p>
+        <p><strong>N/A:</strong> any Tweet that isn't about politics or doesn't make sense</p>
+        <p>When the political sentiment is mixed, such as both joy and sadness, use your judgment to choose the stronger emotion.</p>
+      </full-instructions>
+
+    </crowd-classifier>
+    <crowd-classifier 
+      name="tweet-3"
+      categories="['Extremely Liberal', 'Moderately Liberal', 'Moderately Conservative', 'Extremely Conservative', 'N/A']"
+      header="What is the political sentiment expressed in this Tweet?"
+    >
+
+      <classification-target>
+        <!-- The text you want classified will be substituted for the "text" variable when you 
+               publish a batch with a CSV input file containing multiple text items  -->
+        ${tweet3}
+      </classification-target>
+
+     <!-- Use the short-instructions section for quick instructions that the Worker
+            will see while working on the task. Including some basic examples of 
+            good and bad answers here can help get good results. You can include 
+            any HTML here. -->
+      <short-instructions>
+       Choose the primary sentiment that is expressed by the text. If the Tweet doesn't relate to politics or the Tweet doesn't make any sense, choose "N/A"
+       
+      </short-instructions>
+
+      <!-- Use the full-instructions section for more detailed instructions that the 
+            Worker can open while working on the task. Including more detailed 
+            instructions and additional examples of good and bad answers here can
+            help get good results. You can include any HTML here. -->
+      <full-instructions header="Sentiment Analysis Instructions">
+        <p><strong>Extremely Liberal Example:</strong> "Crack cocaine should be legal in every state"</p>
+        <p><strong>Moderately Liberal Example:</strong> "I would support a slight increase in taxes in order to fund social welfare programs"</p>
+        <p><strong>Moderately Conservative Example</strong>: "A less regulated economy is a more efficient economy"</p>
+        <p><strong>Extremely Conservative Example:</strong> "Joe Biden is a communist and should be arrested"</p>
+        <p><strong>N/A:</strong> any Tweet that isn't about politics or doesn't make sense</p>
+        <p>When the political sentiment is mixed, such as both joy and sadness, use your judgment to choose the stronger emotion.</p>
+      </full-instructions>
+
+    </crowd-classifier>
+    <crowd-classifier 
+      name="tweet-4"
+      categories="['Extremely Liberal', 'Moderately Liberal', 'Moderately Conservative', 'Extremely Conservative', 'N/A']"
+      header="What is the political sentiment expressed in this Tweet?"
+    >
+
+      <classification-target>
+        <!-- The text you want classified will be substituted for the "text" variable when you 
+               publish a batch with a CSV input file containing multiple text items  -->
+        ${tweet4}
+      </classification-target>
+
+     <!-- Use the short-instructions section for quick instructions that the Worker
+            will see while working on the task. Including some basic examples of 
+            good and bad answers here can help get good results. You can include 
+            any HTML here. -->
+      <short-instructions>
+       Choose the primary sentiment that is expressed by the text. If the Tweet doesn't relate to politics or the Tweet doesn't make any sense, choose "N/A"
+       
+      </short-instructions>
+
+      <!-- Use the full-instructions section for more detailed instructions that the 
+            Worker can open while working on the task. Including more detailed 
+            instructions and additional examples of good and bad answers here can
+            help get good results. You can include any HTML here. -->
+      <full-instructions header="Sentiment Analysis Instructions">
+        <p><strong>Extremely Liberal Example:</strong> "Crack cocaine should be legal in every state"</p>
+        <p><strong>Moderately Liberal Example:</strong> "I would support a slight increase in taxes in order to fund social welfare programs"</p>
+        <p><strong>Moderately Conservative Example</strong>: "A less regulated economy is a more efficient economy"</p>
+        <p><strong>Extremely Conservative Example:</strong> "Joe Biden is a communist and should be arrested"</p>
+        <p><strong>N/A:</strong> any Tweet that isn't about politics or doesn't make sense</p>
+        <p>When the political sentiment is mixed, such as both joy and sadness, use your judgment to choose the stronger emotion.</p>
+      </full-instructions>
+
+    </crowd-classifier>
+    <crowd-classifier 
+      name="tweet-5"
+      categories="['Extremely Liberal', 'Moderately Liberal', 'Moderately Conservative', 'Extremely Conservative', 'N/A']"
+      header="What is the political sentiment expressed in this Tweet?"
+    >
+
+      <classification-target>
+        <!-- The text you want classified will be substituted for the "text" variable when you 
+               publish a batch with a CSV input file containing multiple text items  -->
+        ${tweet5}
+      </classification-target>
+
+     <!-- Use the short-instructions section for quick instructions that the Worker
+            will see while working on the task. Including some basic examples of 
+            good and bad answers here can help get good results. You can include 
+            any HTML here. -->
+      <short-instructions>
+       Choose the primary sentiment that is expressed by the text. If the Tweet doesn't relate to politics or the Tweet doesn't make any sense, choose "N/A"
+       
+      </short-instructions>
+
+      <!-- Use the full-instructions section for more detailed instructions that the 
+            Worker can open while working on the task. Including more detailed 
+            instructions and additional examples of good and bad answers here can
+            help get good results. You can include any HTML here. -->
+      <full-instructions header="Sentiment Analysis Instructions">
+        <p><strong>Extremely Liberal Example:</strong> "Crack cocaine should be legal in every state"</p>
+        <p><strong>Moderately Liberal Example:</strong> "I would support a slight increase in taxes in order to fund social welfare programs"</p>
+        <p><strong>Moderately Conservative Example</strong>: "A less regulated economy is a more efficient economy"</p>
+        <p><strong>Extremely Conservative Example:</strong> "Joe Biden is a communist and should be arrested"</p>
+        <p><strong>N/A:</strong> any Tweet that isn't about politics or doesn't make sense</p>
+        <p>When the political sentiment is mixed, such as both joy and sadness, use your judgment to choose the stronger emotion.</p>
+      </full-instructions>
+
+    </crowd-classifier>
+    <crowd-classifier 
+      name="tweet-6"
+      categories="['Extremely Liberal', 'Moderately Liberal', 'Moderately Conservative', 'Extremely Conservative', 'N/A']"
+      header="What is the political sentiment expressed in this Tweet?"
+    >
+
+      <classification-target>
+        <!-- The text you want classified will be substituted for the "text" variable when you 
+               publish a batch with a CSV input file containing multiple text items  -->
+        ${tweet6}
+      </classification-target>
+
+     <!-- Use the short-instructions section for quick instructions that the Worker
+            will see while working on the task. Including some basic examples of 
+            good and bad answers here can help get good results. You can include 
+            any HTML here. -->
+      <short-instructions>
+       Choose the primary sentiment that is expressed by the text. If the Tweet doesn't relate to politics or the Tweet doesn't make any sense, choose "N/A"
+       
+      </short-instructions>
+
+      <!-- Use the full-instructions section for more detailed instructions that the 
+            Worker can open while working on the task. Including more detailed 
+            instructions and additional examples of good and bad answers here can
+            help get good results. You can include any HTML here. -->
+      <full-instructions header="Sentiment Analysis Instructions">
+        <p><strong>Extremely Liberal Example:</strong> "Crack cocaine should be legal in every state"</p>
+        <p><strong>Moderately Liberal Example:</strong> "I would support a slight increase in taxes in order to fund social welfare programs"</p>
+        <p><strong>Moderately Conservative Example</strong>: "A less regulated economy is a more efficient economy"</p>
+        <p><strong>Extremely Conservative Example:</strong> "Joe Biden is a communist and should be arrested"</p>
+        <p><strong>N/A:</strong> any Tweet that isn't about politics or doesn't make sense</p>
+        <p>When the political sentiment is mixed, such as both joy and sadness, use your judgment to choose the stronger emotion.</p>
+      </full-instructions>
+
+    </crowd-classifier>
+    <crowd-classifier 
+      name="tweet-7"
+      categories="['Extremely Liberal', 'Moderately Liberal', 'Moderately Conservative', 'Extremely Conservative', 'N/A']"
+      header="What is the political sentiment expressed in this Tweet?"
+    >
+
+      <classification-target>
+        <!-- The text you want classified will be substituted for the "text" variable when you 
+               publish a batch with a CSV input file containing multiple text items  -->
+        ${tweet7}
+      </classification-target>
+
+     <!-- Use the short-instructions section for quick instructions that the Worker
+            will see while working on the task. Including some basic examples of 
+            good and bad answers here can help get good results. You can include 
+            any HTML here. -->
+      <short-instructions>
+       Choose the primary sentiment that is expressed by the text. If the Tweet doesn't relate to politics or the Tweet doesn't make any sense, choose "N/A"
+       
+      </short-instructions>
+
+      <!-- Use the full-instructions section for more detailed instructions that the 
+            Worker can open while working on the task. Including more detailed 
+            instructions and additional examples of good and bad answers here can
+            help get good results. You can include any HTML here. -->
+      <full-instructions header="Sentiment Analysis Instructions">
+        <p><strong>Extremely Liberal Example:</strong> "Crack cocaine should be legal in every state"</p>
+        <p><strong>Moderately Liberal Example:</strong> "I would support a slight increase in taxes in order to fund social welfare programs"</p>
+        <p><strong>Moderately Conservative Example</strong>: "A less regulated economy is a more efficient economy"</p>
+        <p><strong>Extremely Conservative Example:</strong> "Joe Biden is a communist and should be arrested"</p>
+        <p><strong>N/A:</strong> any Tweet that isn't about politics or doesn't make sense</p>
+        <p>When the political sentiment is mixed, such as both joy and sadness, use your judgment to choose the stronger emotion.</p>
+      </full-instructions>
+
+    </crowd-classifier>
+</crowd-form> 
