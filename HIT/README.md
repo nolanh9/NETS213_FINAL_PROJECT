@@ -6,7 +6,7 @@ Our Mechanical Turk HIT is to evaluate the political sentiments of tweets so tha
 
 ## Where can I access the HIT?
 
-[MTurk Sandbox](INSERT LINK HERE)
+[MTurk Sandbox](https://workersandbox.mturk.com/projects/3BHOG8KFNLAOMPM14BRWE0OL5VIR8C/tasks?ref=w_pl_prvw)
 
 
 ## HIT Instructions
