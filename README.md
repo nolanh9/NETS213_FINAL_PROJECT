@@ -91,3 +91,19 @@ src/code.py (QC function)
 
 To find the code for aggregation navigate to:
 src/code.py (aggregation function)
+
+
+### PART THREE
+
+To aggregate and clean our data, we took in our raw tweets, cleaned the text of any commas and newline characters,
+and created a CSV file consisting of ten tweets per row (the first 3 are quality controls, the last 7 are tweet inputs).
+The code for this process was done within: 
+src/csv_generator.py
+
+Next, created the hit using our cleaned data. The format of our hit was created using the following html script:
+HIT/hit.html
+
+After this, we plan on imposing quality control using src/code.py (QC function) and aggregation using src/code.py (aggregation function)
+
+Then, we plan to finalize a BERT based NLP classifier, train it on our labeled tweets, and be able to use this trained classifier to 
+identify the political sentiment of a given tweet.
